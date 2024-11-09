@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Towne's Jumpy Tarantula | Fizz Buzz 4</title>
+    <link rel="stylesheet" href="styles/fbstyles.css">
+	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>FizzBuzz 4</h2>
+        <h3 id="greeting">Welcome to Jumpy Tarantula</h3>
+        <p>Fill out the form, and then click the submit button.</p>
+
+        <form id="name-form-4">
+            <fieldset id="lengthy-fieldset">
+                <p class="form-p">Enter your Name:</p>
+				<label for="first-name">First Name: 
+				<input type="text" id="first-name" placeholder="First name here" required="required"></label><br>
+
+
+                <label for="middle-initial">Middle Initial:</label>
+                <input type="text" id="middle-initial" maxlength="1" placeholder="Middle initial here"><br>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Last name here" required="required"><br> 
+
+                <p class="form-p">Choose Divisors:</p>
+                <label for="divisor-1">First Divisor:</label>
+                <input type="number" id="divisor-1" placeholder="5" required="required"><br> 
+
+                <label for="divisor-2">Second Divisor:</label>
+                <input type="number" id="divisor-2" placeholder="7" required="required"><br> 
+
+                <label for="divisor-3">Third Divisor:</label>
+                <input type="number" id="divisor-3" placeholder="11" required="required"><br> 
+                <p class="form-p">Choose three words:</p>
+				<label for="first-word">First Word: 
+                    <input type="text" id="first-word" placeholder="Jumpy" required="required"></label><br>
+    
+    
+                    <label for="second-word">Second Word:</label>
+                    <input type="text" id="second-word" placeholder="Tarantula" required="required"><br>
+    
+                    <label for="third-word">Third Word:</label>
+                    <input type="text" id="third-word" placeholder="Venomous" required="required"><br> 
+                    <p class="form-p">How high do you want to count?</p>
+                    <label for="total-count">Count to:</label>
+                    <input type="number" id="total-count" placeholder="125" required="required"><br>
+                    
+                <button type="submit">Submit</button>
+                <button type="button" id="clear">Clear</button>
+                
+            </fieldset>
+        </form>
+<div id="output">
+    <div id="fizzbuzz-output-box-4">
+        <ul id="fizz-buzz-list"></ul>
+    </div>
+</div>
+    </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+        <script src="scripts/fizzbuzz4.js"></script>
+</body>
+</html>
