@@ -130,13 +130,19 @@ fieldset {
     line-height: 50px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    padding-top: 10px;
+}
+
 button {
-    display: block;
-    margin: 1em auto;
+    display: inline-block;
     font-size: 1.1rem;
     background-color: #FFFFFF;
     border: 3px solid #333;
-    min-width: 300px;
+    min-width: 200px;
     cursor: grab;
 }
 
@@ -210,6 +216,7 @@ h2 {
     font-size: 18px;
     text-align: left;
     line-height: 4px;
+    font-size: 22px;
 }
 
 header {
@@ -250,6 +257,7 @@ header {
     padding: 20px;
     text-align: left;
     line-height: 25px;
+    font-size: 20px;
 }
 
 #fizzbuzz-output-box-4 {
@@ -263,8 +271,20 @@ header {
     max-width: 680px;
     border: 4px solid black;
     border-radius: 8px;
-    margin-top: -300px;
+    margin-top: -500px;
     position: relative;
     left: 48.5%;
     transform: translateX(-50%);
+}
+
+#divisor-1, #divisor-2, #divisor-3, #middle-initial, #total-count {
+width: 50px;
+}
+
+#first-name,  #last-name {
+    width: 100px;
+}
+
+#first-word, #second-word, #third-word {
+    width: 100px;
 }
