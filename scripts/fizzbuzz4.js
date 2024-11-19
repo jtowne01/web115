@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const defaults = {
         firstName: "Casey",
         lastName: "Webs",
@@ -8,11 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         firstWord: "Jumpy",
         secondWord: "Tarantula",
         thirdWord: "Venomous",
-        countTo: 125,
-        firstCombination: "Arachnids",
-        secondCombination: "Eight-eyed",
-        thirdCombination: "Robust",
-        fourthCombination: "Ground-Dwelling"
+        countTo: 125
     };
 
     function setDefaultValues() {
@@ -31,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setDefaultValues();
 
-    document.getElementById("name-form-4").addEventListener("submit", function(event) {
+    document.getElementById("name-form-4").addEventListener("submit", function (event) {
         event.preventDefault();
 
         const formData = {
@@ -44,11 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             firstWord: document.getElementById("first-word").value.trim() || defaults.firstWord,
             secondWord: document.getElementById("second-word").value.trim() || defaults.secondWord,
             thirdWord: document.getElementById("third-word").value.trim() || defaults.thirdWord,
-            countTo: parseInt(document.getElementById("total-count").value) || defaults.countTo,
-            firstCombination: defaults.firstCombination,
-            secondCombination: defaults.secondCombination,
-            thirdCombination: defaults.thirdCombination,
-            fourthCombination: defaults.fourthCombination
+            countTo: parseInt(document.getElementById("total-count").value) || defaults.countTo
         };
 
         if (!formData.firstName || !formData.lastName) {
@@ -59,36 +51,39 @@ document.addEventListener('DOMContentLoaded', function() {
         const greetingMessage = `Welcome to Jumpy Tarantula, ${formData.firstName} ${formData.middleInitial ? formData.middleInitial + "." : ""} ${formData.lastName}!`;
         document.getElementById("greeting").innerText = greetingMessage;
 
-        outputBox.style.cssText = "display: block !important; visibility: visible !important;";
+        outputBox.style.cssText = "display: block; visibility: visible;";
         outputBox.innerHTML = "";
 
         const fizzBuzzList = document.createElement("ul");
         fizzBuzzList.id = "fizz-buzz-list";
-        outputBox.appendChild(fizzBuzzList); 
+        outputBox.appendChild(fizzBuzzList);
 
         for (let i = 1; i <= formData.countTo; i++) {
             let result = `${i}.`;
             if (i % formData.firstDivisor === 0 && i % formData.secondDivisor === 0 && i % formData.thirdDivisor === 0) {
-                result += " " + formData.fourthCombination;
+                result += ` ${formData.firstWord}, ${formData.secondWord}, ${formData.thirdWord}`;
             } else if (i % formData.firstDivisor === 0 && i % formData.thirdDivisor === 0) {
-                result += " " + formData.secondCombination;
+                result += ` ${formData.firstWord}, ${formData.thirdWord}`;
             } else if (i % formData.secondDivisor === 0 && i % formData.thirdDivisor === 0) {
-                result += " " + formData.thirdCombination;
+                result += ` ${formData.secondWord}, ${formData.thirdWord}`;
             } else if (i % formData.firstDivisor === 0 && i % formData.secondDivisor === 0) {
-                result += " " + formData.firstCombination; 
-            }  else {
-                if (i % formData.firstDivisor === 0) result += " " + formData.firstWord;
-                if (i % formData.secondDivisor === 0) result += " " + formData.secondWord;
-                if (i % formData.thirdDivisor === 0) result += " " + formData.thirdWord;
+                result += ` ${formData.firstWord}, ${formData.secondWord}`;
+            } else {
+                if (i % formData.firstDivisor === 0) result += ` ${formData.firstWord}`;
+                if (i % formData.secondDivisor === 0) result += ` ${formData.secondWord}`;
+                if (i % formData.thirdDivisor === 0) result += ` ${formData.thirdWord}`;
             }
-        
             const listItem = document.createElement("li");
             listItem.textContent = result;
             fizzBuzzList.appendChild(listItem);
         }
     });
 
-    document.getElementById("clear").addEventListener("click", function() {
-        outputBox.innerHTML = ""; 
+    document.getElementById("clear").addEventListener("click", function () {
+        setDefaultValues();
+
+        outputBox.innerHTML = "";
+        outputBox.style.cssText = "display: none; visibility: hidden;";
+        document.getElementById("greeting").innerText = "";
     });
 });
