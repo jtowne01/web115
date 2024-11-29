@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Metal+Mania&family=Playwrite+AU+QLD:wght@100..400&display=swap');
 body {
-    background-image: url('images/card-background.jpg');
+    background-image: url('https://github.com/jtowne01/web115/blob/686969e5f9ef2f348cbacd6c251606fb445e0378/images/card-background.jpg');
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center;
@@ -57,7 +57,7 @@ body a {
     
     #business-card {
         display: block;
-        background-image: url('images/card-backgrounds.jpg');
+        background-image: url('https://github.com/jtowne01/web115/blob/686969e5f9ef2f348cbacd6c251606fb445e0378/images/card-backgrounds.jpg');
         background-size: cover;
         background-repeat: no-repeat; 
         background-position: center;
