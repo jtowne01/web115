@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Towne's Jumpy Tarantula | Intro Form</title>
+    <link rel="stylesheet" href="styles/intro-form.css">
+	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Intro Form</h2>
+        <h3 id="greeting">Welcome to Jumpy Tarantula</h3>
+        <p>Fill out the form, and then click the submit button.</p>
+
+        <form id="form">
+            <fieldset>
+                
+              <!--  <label for="profile-pic">Upload an Image
+                <input type="file" id="profile-pic" alt="Me"></label><br> -->
+
+				<label for="first-name">Enter your Name
+				<input type="text" id="first-name" placeholder="Jason" required="required"></label>
+
+                <label for="last-name"></label>
+                <input type="text" id="last-name" placeholder="Towne" required="required"><br>
+                
+                <label for="personal-background">Personal Background</label><br>
+                <textarea type="text" id="personal-background" placeholder="I am a twenty-year-old from Charlotte. I enjoy music, skateboarding, and being outside with nature." required="required"></textarea><br>
+
+                <label for="academic-background">Academic Background</label><br>
+                <textarea type="text" id="academic-background" placeholder="This is my second year at CPCC. I graduated high school in 2022 and am working towards a two-year degree in Full Stack Programming." required="required"></textarea><br>
+
+                <label for="web-dev-background">Background in Web Development</label><br>
+                <textarea type="text" id="web-dev-background" placeholder="I have no background history with programming outside of coursework projects from other classes and personal projects for experience." required="required"></textarea><br>
+
+                <label for="computer-platform">Primary Computer Platform:</label><br>
+                <textarea type="text" id="computer-platform" placeholder="Desktop PC with Windows 11." required="required"></textarea><br>
+
+                
+                <label for="courses">Courses I'm Taking and Why:</label><br>
+                <textarea type="text" id="courses" placeholder="Web115 - Web Markup and Scripting:  I am taking this course to further advance my knowledge and experience with front-end programming.
+                Web140 - Web Development Tools:  I am taking this course to improve on building websites altogether.
+                DBA120 - Database Programming I: I am taking this course to learn about databases and get familiar with SQL programming." required="required"></textarea><br>
+
+                <label for="interesting-fact">Interesting Thing About Myself:</label><br>
+                <textarea type="text" id="interesting-fact" placeholder="I went to Mumbai, India, in late 2023 for my sister's wedding since my brother-in-law is from there, and most of his family currently still lives there. It was a great experience, and seeing the differences between an American and Indian wedding was unbelievable." required="required"></textarea><br>
+
+                    <div class="button-container">
+                <button type="submit">Submit</button>
+                <button type="button" id="clear">Clear</button>
+                     </div>
+                    </fieldset>
+        </form>
+<div id="output">
+    <div id="output-box">
+        <ul id="intro-form-output"></ul>
+    </div>
+</div>
+    </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+        <script src="scripts/intro-form.js"></script>
+</body>
+</html>
